@@ -6,22 +6,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        //define the scanner once in each program
 
-        int numRows = 3;
-        int numCol = 4;
+        int found = 0;
 
-        int i = 0;
-        int j = 0;
-
-        while (i < numRows){
-            while (j <= i ){
-                j++;
-                System.out.print("*");
-            }
-            j = 0;
-            System.out.println();
-            i++;
+        for (int i = 0; found < 5; i++) {
+             if (i%2 == 1 && i%13 == 1){
+                 found++;
+                 System.out.print(i + ", ");
+             }
         }
     }
 }
