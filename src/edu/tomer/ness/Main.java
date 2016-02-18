@@ -9,17 +9,29 @@ public class Main {
         //define the scanner once in each program
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter a number for the Factorial:");
+        //input a number:
+        System.out.println("Enter an n digit number:");
         int n = scanner.nextInt();
+        int m = n;
 
-        int counter = 1;
-        int sum = 0;
-
-        while (counter <= n){
-            sum += counter;
-            counter = counter + 1; //counter++
+        int divider = 1; //
+        while (n != 0){
+            System.out.print(n % 10 + ", ");
+            n = n / 10;
+            divider  = divider * 10;
         }
-        System.out.println(n + "! = " +sum);
+        divider /= 10;
+
+
+        System.out.println("--------------------------------");
+
+        while (divider != 0){
+            System.out.print(m / divider +", ");
+            m = m % divider;
+            divider = divider / 10;
+        }
+
+
 
     }
 }
