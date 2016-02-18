@@ -10,28 +10,25 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         //input a number:
-        System.out.println("Enter an n digit number:");
+        System.out.println("How many fibonacci numbers?:");
         int n = scanner.nextInt();
-        int m = n;
 
-        int divider = 1; //
-        while (n != 0){
-            System.out.print(n % 10 + ", ");
-            n = n / 10;
-            divider  = divider * 10;
+        int fib1 = 0;
+        int fib2 = 1;
+        int counter = 2;
+        System.out.println(fib1);
+        System.out.println(fib2);
+        //1  2  3  4  5  6  7
+        //0, 1, 1, 2, 3, 5, 8
+
+        //n = 6
+        while (counter < n){
+            int temp = fib2; //temp = 2
+            fib2 = fib1 + fib2; // fib2 = 3
+            fib1 = temp;// fib1 = 2
+            System.out.println(fib2);
+            counter++;
         }
-        divider /= 10;
-
-
-        System.out.println("--------------------------------");
-
-        while (divider != 0){
-            System.out.print(m / divider +", ");
-            m = m % divider;
-            divider = divider / 10;
-        }
-
-
 
     }
 }
